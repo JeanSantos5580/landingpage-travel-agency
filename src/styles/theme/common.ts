@@ -1,6 +1,10 @@
 export const commonStyles = {
   colors: {
     white: '#FFF',
+    black: '#080809',
+
+    gray_200: '#F5F5F5',
+    gray_500: '#84829A',
     gray_700: '#212832',
 
     orange_100: '#FFF1DA',
@@ -15,6 +19,8 @@ export const commonStyles = {
 
     tealish_blue: '#5E6282',
 
+    purple_200: '#8A79DF',
+    purple_300: '#4152CA',
     purple_700: '#181E4B',
 
     /* '#080809'

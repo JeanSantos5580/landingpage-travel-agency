@@ -1,5 +1,5 @@
-import { Play } from '@phosphor-icons/react'
 import styled from 'styled-components'
+import { Play } from '@phosphor-icons/react'
 
 export const ContainerHome = styled.div`
   width: 100%;
@@ -24,6 +24,7 @@ export const Image = styled.img`
   width: 115px;
   height: 34px;
 `
+
 export const ContainerButtons = styled.div`
   display: flex;
   gap: 6rem;
@@ -38,9 +39,11 @@ export const Button = styled.button`
   border: none;
   cursor: pointer;
 `
+
 export const Hero = styled.div`
   display: flex;
 `
+
 export const HeroTexts = styled.div`
   display: flex;
   flex-direction: column;
@@ -71,6 +74,7 @@ export const ContainerHeroImage = styled.div`
   right: 7.5rem;
   top: 9.375rem;
 `
+
 export const HeroImage = styled.img`
   width: 100%;
   height: 100%;
@@ -83,6 +87,7 @@ export const Decorator = styled.div`
   top: -3.125rem;
   overflow: hidden;
 `
+
 export const Buttons = styled.div`
   display: flex;
   align-items: center;
@@ -129,19 +134,21 @@ export const PlayButton = styled.button`
 
   background: ${({ theme }) => theme.colors.red_300};
 `
+
 export const PlayIcon = styled(Play).attrs(({ theme }) => ({
   weight: 'fill',
   color: theme.colors.white,
 }))``
 
-export const CategorySection = styled.div`
+export const Section = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 105px;
 
   small {
     font-family: 'Poppins', sans-serif;
     font-size: 1.125rem;
-    font-weight: 600;
+    font-weight: 500;
     align-self: center;
     color: ${({ theme }) => theme.colors.tealish_blue};
   }
@@ -156,7 +163,37 @@ export const CategorySection = styled.div`
     margin-bottom: 68px;
   }
 `
+
 export const Cards = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  gap: 24px;
+`
+export const TravelSteps = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 72px;
+  margin-top: 186px;
+`
+
+export const Steps = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  small {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: ${({ theme }) => theme.colors.tealish_blue};
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-family: 'Volkhov', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: ${({ theme }) => theme.colors.purple_700};
+    margin-bottom: 32px;
+  }
 `

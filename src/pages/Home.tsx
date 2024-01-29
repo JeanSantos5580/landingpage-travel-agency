@@ -2,7 +2,6 @@ import {
   Button,
   Buttons,
   Cards,
-  CategorySection,
   ContainerButtons,
   ContainerHeroImage,
   ContainerHome,
@@ -16,8 +15,14 @@ import {
   PlayButton,
   PlayButtonContainer,
   PlayIcon,
+  Section,
+  Steps,
+  TravelSteps,
 } from './styles'
+
 import { CategoryCard } from '../components/CategoryCard'
+import { DestinationCard } from '../components/DestinationCard'
+
 import logo from '../assets/jadoo-logo.png'
 import heroImg from '../assets/traveller.png'
 import decorator from '../assets/decore.png'
@@ -25,6 +30,12 @@ import antennaImg from '../assets/antenna.png'
 import planeImg from '../assets/plane.png'
 import micImg from '../assets/microphone.png'
 import gearImg from '../assets/gear.png'
+import romeImg from '../assets/rome.png'
+import bigBangImg from '../assets/bigBang.jpg'
+import europeImg from '../assets/europe.jpg'
+import { TravelStep } from '../components/TravelStep'
+import { AirplaneTilt, ArrowsOut, HandCoins } from '@phosphor-icons/react'
+import { TravelAd } from '../components/TravelStep/TravelAd'
 
 export function Home() {
   return (
@@ -68,7 +79,7 @@ export function Home() {
             <HeroImage src={heroImg} alt="" />
           </ContainerHeroImage>
         </Hero>
-        <CategorySection>
+        <Section>
           <small>Category</small>
           <h1>We Offer Best Services</h1>
           <Cards>
@@ -93,7 +104,56 @@ export function Home() {
               description="We deliver outsourced aviation services for military customers"
             />
           </Cards>
-        </CategorySection>
+        </Section>
+        <Section>
+          <small>Top Selling</small>
+          <h1>Top Destinations</h1>
+          <Cards>
+            <DestinationCard
+              path={romeImg}
+              destination="Rome, Italty"
+              price="$5,42k"
+              totalDays={12}
+            />
+            <DestinationCard
+              path={bigBangImg}
+              destination="London, UK"
+              price="$4.2k"
+              totalDays={12}
+            />
+            <DestinationCard
+              path={europeImg}
+              destination="Full Europe"
+              price="$15k"
+              totalDays={28}
+            />
+          </Cards>
+        </Section>
+        <TravelSteps>
+          <Steps>
+            <small>Easy and Fast</small>
+            <h1>Book your next trip in 3 easy steps</h1>
+            <TravelStep
+              type="yellow"
+              icon={<ArrowsOut size={24} weight="light" />}
+              title="Choose Destination"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. "
+            />
+            <TravelStep
+              type="red"
+              icon={<HandCoins size={24} weight="light" />}
+              title="Make Payment"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. "
+            />
+            <TravelStep
+              type="blue"
+              icon={<AirplaneTilt size={24} weight="light" />}
+              title="Reach Airport on Selected Date"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. "
+            />
+          </Steps>
+          <TravelAd />
+        </TravelSteps>
       </ContainerHome>
     </>
   )

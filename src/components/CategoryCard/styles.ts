@@ -9,8 +9,13 @@ export const ContainerCard = styled.div`
   justify-content: center;
   padding: 24px;
   border-radius: 24px;
-
-  border: 1px solid red;
+  box-shadow:
+    0px 1.852px 3.148px 0px rgba(0, 0, 0, 0),
+    0px 8.148px 6.519px 0px rgba(0, 0, 0, 0.01),
+    0px 20px 13px 0px rgba(0, 0, 0, 0.01),
+    0px 38.519px 25.481px 0px rgba(0, 0, 0, 0.01),
+    0px 64.815px 46.852px 0px rgba(0, 0, 0, 0.02),
+    0px 100px 80px 0px rgba(0, 0, 0, 0.02);
 
   h4 {
     font-family: 'Open Sans', sans-serif;
@@ -24,8 +29,8 @@ export const ContainerCard = styled.div`
   small {
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 0.875rem;
+    font-weight: 500;
     color: ${({ theme }) => theme.colors.tealish_blue};
   }
 `
