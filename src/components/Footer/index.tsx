@@ -84,6 +84,7 @@ export function Footer() {
         </SocialMedias>
       </Main>
       <Rights>All rights reserved@jadoo.co</Rights>
+       
     </Container>
   )
 }
