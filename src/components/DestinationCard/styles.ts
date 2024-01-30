@@ -1,8 +1,8 @@
-import { NavigationArrow } from '@phosphor-icons/react'
+import { PaperPlaneTilt } from '@phosphor-icons/react'
 import styled from 'styled-components'
 
 export const ContainerCard = styled.div`
-  width: 250px;
+  width: 315px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,6 +15,11 @@ export const ContainerCard = styled.div`
     0px 38.519px 25.481px 0px rgba(0, 0, 0, 0.01),
     0px 64.815px 46.852px 0px rgba(0, 0, 0, 0.02),
     0px 100px 80px 0px rgba(0, 0, 0, 0.02);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
 
   small {
     text-align: center;
@@ -50,10 +55,8 @@ export const TotalDays = styled.div`
   gap: 14px;
 `
 
-export const IconNavigation = styled(NavigationArrow).attrs(({ theme }) => ({
+export const IconNavigation = styled(PaperPlaneTilt).attrs(({ theme }) => ({
   size: 20,
   weight: 'fill',
   color: theme.colors.black,
-}))`
-  transform: scaleX(-1);
-`
+}))``

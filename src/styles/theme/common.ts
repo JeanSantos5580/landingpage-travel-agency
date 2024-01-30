@@ -19,6 +19,7 @@ export const commonStyles = {
 
     tealish_blue: '#5E6282',
 
+    purple_100: '#efebfc',
     purple_200: '#8A79DF',
     purple_300: '#4152CA',
     purple_700: '#181E4B',

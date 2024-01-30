@@ -96,8 +96,8 @@ export const NumberOfPeople = styled.div`
 `
 
 export const IconBuilding = styled(Buildings).attrs(({ theme }) => ({
-  size: 16,
-  weight: 'light',
+  size: 20,
+  weight: 'regular',
   color: theme.colors.gray_500,
 }))``
 
@@ -173,8 +173,12 @@ export const TripInfo = styled.div`
   span:first-child {
     color: ${({ theme }) => theme.colors.purple_200};
   }
+
   span:last-child {
     color: ${({ theme }) => theme.colors.black};
+  }
+  span:last-child::before {
+    content: '\00a0';
   }
 `
 

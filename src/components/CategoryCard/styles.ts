@@ -16,6 +16,11 @@ export const ContainerCard = styled.div`
     0px 38.519px 25.481px 0px rgba(0, 0, 0, 0.01),
     0px 64.815px 46.852px 0px rgba(0, 0, 0, 0.02),
     0px 100px 80px 0px rgba(0, 0, 0, 0.02);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
 
   h4 {
     font-family: 'Open Sans', sans-serif;

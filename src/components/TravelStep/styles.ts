@@ -44,7 +44,7 @@ export const Content = styled.div`
 
   small {
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400 !important;
     color: ${({ theme }) => theme.colors.tealish_blue};
   }

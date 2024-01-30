@@ -16,6 +16,8 @@ import {
   PlayButtonContainer,
   PlayIcon,
   Section,
+  Sponsor,
+  Sponsorship,
   Steps,
   TravelSteps,
 } from './styles'
@@ -36,8 +38,19 @@ import europeImg from '../assets/europe.jpg'
 import { TravelStep } from '../components/TravelStep'
 import { AirplaneTilt, ArrowsOut, HandCoins } from '@phosphor-icons/react'
 import { TravelAd } from '../components/TravelStep/TravelAd'
+import { Testimonials } from '../components/Testimonials'
+
+import axon from '../assets/sponsorships/axon.png'
+import jetstar from '../assets/sponsorships/jetstar.png'
+import expedia from '../assets/sponsorships/expedia.png'
+import qantas from '../assets/sponsorships/qantas.png'
+import alitalia from '../assets/sponsorships/alitalia.png'
+import { Subscribe } from '../components/Subscribe'
+import { Footer } from '../components/Footer'
 
 export function Home() {
+  const sponsorships = [axon, jetstar, expedia, qantas, alitalia]
+
   return (
     <>
       <ContainerHome>
@@ -52,6 +65,7 @@ export function Home() {
             <Button>Flights</Button>
             <Button>Bookings</Button>
             <Button>Login</Button>
+            <Button outlined="outlined">Sign up</Button>
           </ContainerButtons>
         </Header>
         <Hero>
@@ -113,7 +127,7 @@ export function Home() {
               path={romeImg}
               destination="Rome, Italty"
               price="$5,42k"
-              totalDays={12}
+              totalDays={10}
             />
             <DestinationCard
               path={bigBangImg}
@@ -136,24 +150,36 @@ export function Home() {
             <TravelStep
               type="yellow"
               icon={<ArrowsOut size={24} weight="light" />}
-              title="Choose Destination"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. "
+              title="Select Your Destination"
+              description="Choose the perfect destination for your journey. Whether it's a vibrant city, a relaxing beach, or an adventurous mountain retreat, pick the place that suits your travel desires."
             />
+
             <TravelStep
               type="red"
               icon={<HandCoins size={24} weight="light" />}
-              title="Make Payment"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. "
+              title="Complete Payment"
+              description="Finalize your booking by making a secure payment. Ensure a smooth and hassle-free experience by taking care of the financial aspect of your trip."
             />
+
             <TravelStep
               type="blue"
               icon={<AirplaneTilt size={24} weight="light" />}
-              title="Reach Airport on Selected Date"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. "
+              title="Arrive at the Airport on Your Selected Date"
+              description="Be ready for your journey by reaching the airport on the specified date. Check your travel itinerary and ensure a timely arrival to make the most of your travel experience."
             />
           </Steps>
           <TravelAd />
         </TravelSteps>
+        <Testimonials />
+        <Sponsorship>
+          {sponsorships.map((sponsor) => (
+            <Sponsor key={sponsor}>
+              <img src={sponsor} alt="" />
+            </Sponsor>
+          ))}
+        </Sponsorship>
+        <Subscribe />
+        <Footer />
       </ContainerHome>
     </>
   )

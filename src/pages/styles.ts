@@ -27,16 +27,25 @@ export const Image = styled.img`
 
 export const ContainerButtons = styled.div`
   display: flex;
-  gap: 6rem;
+  gap: 3rem;
 `
 
-export const Button = styled.button`
+type OutlineButton = {
+  outlined?: 'outlined'
+}
+
+export const Button = styled.button<OutlineButton>`
+  width: 102px;
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   font-weight: bold;
   color: ${({ theme }) => theme.colors.gray_700};
   background: none;
   border: none;
+  padding: 9px 21px;
+  border-radius: 5px;
+  border: ${(props) =>
+    props.outlined === 'outlined' ? '1px solid black' : 'none'};
   cursor: pointer;
 `
 
@@ -179,6 +188,7 @@ export const TravelSteps = styled.div`
 export const Steps = styled.div`
   display: flex;
   flex-direction: column;
+  width: 65%;
 
   small {
     font-family: 'Poppins', sans-serif;
@@ -196,4 +206,27 @@ export const Steps = styled.div`
     color: ${({ theme }) => theme.colors.purple_700};
     margin-bottom: 32px;
   }
+`
+
+export const Sponsorship = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 215px;
+`
+export const Sponsor = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 86px;
+  border-radius: 10px;
+  background: ${({ theme }) => theme.colors.white};
+  box-shadow:
+    0px 1.852px 3.148px 0px rgba(0, 0, 0, 0),
+    0px 8.148px 6.519px 0px rgba(0, 0, 0, 0.01),
+    0px 20px 13px 0px rgba(0, 0, 0, 0.01),
+    0px 38.519px 25.481px 0px rgba(0, 0, 0, 0.01),
+    0px 64.815px 46.852px 0px rgba(0, 0, 0, 0.02),
+    0px 100px 80px 0px rgba(0, 0, 0, 0.02);
 `
